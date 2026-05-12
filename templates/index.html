@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronosLog | Enterprise Terminal</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="global-loader">
+        <div class="loader-content">
+            <div class="canvas-spinner"></div>
+            <h2 style="font-family: 'Lato', sans-serif; font-weight: 900; color: white; margin-top: 20px; letter-spacing: 1px;">CHRONOS_LOG</h2>
+            <p style="color: #fca5a5; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">Establishing Secure Connection...</p>
+        </div>
+    </div>
+
+    <div id="app">
+        <div id="login-view" class="hidden">
+            <div class="login-box" id="login-box-container">
+                <div class="login-logo">
+                    <h1>CHRONOS_LOG</h1>
+                    <span>Enterprise Access</span>
+                </div>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="login-email" required placeholder="name@chronos.com" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password">
+                    </div>
+                    <div id="login-error"></div>
+                    <button type="submit" id="login-btn" class="btn btn-primary btn-block btn-lg">Sign In</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="main-layout" class="hidden">
+            <aside id="sidebar"></aside>
+            <main id="content"></main>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
